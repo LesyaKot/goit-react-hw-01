@@ -1,25 +1,32 @@
-const userData = {
-    username: "Jacques Gluke",
-    tag: "jgluke",
-    location: "Ocho Rios, Jamaica",
-    avatar: "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-    stats: {
-      followers: 5603,
-      views: 4827,
-      likes: 1308
-    }
-  };
-  const jsonUserData = JSON.stringify(userData, null, 2);
 
-export default function Profile(){      
-    return (
-    <>
-        <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-     />
-        </>)
-}
+
+const Profile = ({ name, tag, location, image, stats }) => {
+  const { followers, views, likes } = stats;
+
+  return (
+    <div className="wrapper">
+      <div className="img-wrapper">
+        <img className="user-img" src={image} alt="User avatar" />
+        <p className="user-name">{name}</p>
+        <p>@{tag}</p>
+        <p>{location}</p>
+      </div>
+      <ul className="list">
+        <li className="list-item">
+          <span>Followers</span>
+          <span>{followers}</span>
+        </li>
+        <li className="list-item">
+          <span>Views</span>
+          <span>{views}</span>
+        </li>
+        <li className="list-item">
+          <span>Likes</span>
+          <span>{likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Profile;
