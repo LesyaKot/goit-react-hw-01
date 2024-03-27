@@ -1,11 +1,13 @@
-import './App.css'
+import "./App.css";
 import Profile from "./components/Profile";
+import FriendList from "./components/FriendList";
 import userData from "./userData.json";
+import friends from "./friends.json";
 
-
+// Profile
 const App = () => {
   return (
-    <div>
+    <>
       <Profile
         name={userData.username}
         tag={userData.tag}
@@ -13,8 +15,10 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-    </div>
+      
+      <FriendList friends={friends} />
+    
+    </>
   );
 };
-
 export default App;
