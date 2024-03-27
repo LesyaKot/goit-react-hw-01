@@ -1,9 +1,14 @@
+.friends-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .friends-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 22px;
 }
 
 .friends-list-item-wrap {
@@ -38,5 +43,5 @@
 }
 
 .friends-list-item {
-    list-style: none;
+  list-style: none;
 }

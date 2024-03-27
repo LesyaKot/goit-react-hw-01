@@ -1,0 +1,39 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: #888;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  padding: 35px;
+  width: 48px;
+}
+.wrapper {
+  border: 2px solid rgba(11, 11, 11, 0.5);
+  border-radius: 10px;
+  padding: 16px;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-img {
+  width: 300px;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-name {
+  font-weight: 700;
+}
