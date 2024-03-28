@@ -1,3 +1,4 @@
+import FriendListItem from "../../components/FriendListItem/FriendListItem";
 import styles from "./FriendList.module.css";
 
 const FriendList = ({ friends }) => {
@@ -6,22 +7,16 @@ const FriendList = ({ friends }) => {
       <ul className={styles["friends-list"]}>
         {friends.map((friend) => (
           <li key={friend.id} className={styles["friends-list-item"]}>
-            <div className={styles["friends-list-item-wrap"]}>
-              <img
-                className={styles["friend-avatar"]}
-                src={friend.avatar}
-                alt="Avatar"
-                width="48"
-              />
-              <p className={styles["friend-name"]}>{friend.name}</p>
-              <p
-                className={`${styles["friend-status"]} ${
-                  friend.isOnline ? styles["online"] : styles["offline"]
-                }`}
-              >
-                {friend.isOnline ? "Online" : "Offline"}
-              </p>
-            </div>
+            <FriendListItem
+  avatar={friend.avatar}
+  name={friend.name}
+  isOnline={friend.isOnline}
+  className={`${styles["friend-status"]} ${
+    friend.isOnline ? styles["online"] : styles["offline"]
+  }`}
+>
+  {friend.isOnline ? "Online" : "Offline"}
+</FriendListItem>
           </li>
         ))}
       </ul>
